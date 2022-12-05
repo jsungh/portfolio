@@ -1,0 +1,217 @@
+main {
+    height: 8000px;
+    background: linear-gradient( to top, #1d1d1d 50%, rgb(28, 28, 28) 60%, #1d1d1d );
+
+}
+
+.character {
+    position: fixed;
+    width: 120px;
+    top: 0;
+    right: 50%;
+    transform: translate(50%, 0);
+}
+.character img {
+    width: 100%;
+}
+.planet_wrap {
+    position: relative;
+    height: 70%;
+}
+.sub_planet {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 4;
+}
+.planet1 {
+    top: 24%;
+    left: 75%;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(to bottom, #70a27d 1%, #4552a1 50%, #371a6a 100%);
+    transform: rotate(-15deg);
+}
+.planet2 {
+    top: 25%;
+    left: 35%;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(to bottom, #cbce44 1%, #dfd112 50%, #867a1a 100%);
+    transform: rotate(-20deg);
+}
+.planet3 {
+    top: 30%;
+    left: 15%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #ce4467 1%, #df128a 50%, #867a1a 100%);
+    transform: rotate(0);
+}
+.planet4 {
+    top: 32%;
+    left: 68%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #90ce44 1%, #dfd112 50%, #867a1a 100%);
+    transform: rotate(18deg);
+}
+.planet5 {
+    top: 44%;
+    left: 80%;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(to bottom, #5e351b 1%, #7a5109 50%, #867a1a 100%);
+    transform: rotate(-35deg);
+}
+.planet6 {
+    top: 45%;
+    left: 30%;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(to bottom, #cbce44 1%, #6a9b5a 50%, #3f3b1e 100%);
+    transform: rotate(-15deg);
+}
+.planet7 {
+    top: 34%;
+    left: 10%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, #44aece 1%, #247394 50%, #1a7286 100%);
+    transform: rotate(-85deg);
+}
+.planet8 {
+    top: 50%;
+    left: 43%;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to bottom, #fecf4e 1%, #a62a44 50%, #310441 100%);
+    transform: rotate(-15deg);
+}
+.planet9 {
+    top: 55%;
+    left: 75%;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(to bottom, #70a27d 1%, #4552a1 50%, #371a6a 100%);
+    transform: rotate(-15deg);
+}
+.planet10 {
+    top: 55%;
+    left: 10%;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(to bottom, #cbce44 1%, #dfd112 50%, #867a1a 100%);
+    transform: rotate(-20deg);
+}
+.planet11 {
+    top: 70%;
+    left: 7%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #ce4467 1%, #df128a 50%, #867a1a 100%);
+    transform: rotate(0);
+}
+.planet12 {
+    top: 67%;
+    left: 60%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #90ce44 1%, #dfd112 50%, #867a1a 100%);
+    transform: rotate(18deg);
+}
+.planet13 {
+    top: 72%;
+    left: 75%;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(to bottom, #5e351b 1%, #7a5109 50%, #867a1a 100%);
+    transform: rotate(-35deg);
+}
+.planet14 {
+    top: 80%;
+    left: 37%;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to bottom, #cbce44 1%, #6a9b5a 50%, #3f3b1e 100%);
+    transform: rotate(-15deg);
+}
+.planet15 {
+    top: 81%;
+    left: 73%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, #44aece 1%, #247394 50%, #1a7286 100%);
+    transform: rotate(-85deg);
+}
+.planet16 {
+    top: 66%;
+    left: 15%;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to bottom, #fecf4e 1%, #a62a44 50%, #310441 100%);
+    transform: rotate(-15deg);
+}
+.planet17 {
+    top: 87%;
+    left: 80%;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(to bottom, #70a27d 1%, #4552a1 50%, #371a6a 100%);
+    transform: rotate(-15deg);
+}
+.planet18 {
+    top: 88%;
+    left: 10%;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(to bottom, #cbce44 1%, #dfd112 50%, #867a1a 100%);
+    transform: rotate(-20deg);
+}
+.planet19 {
+    top: 91%;
+    left: 25%;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom, #ce4467 1%, #df128a 50%, #867a1a 100%);
+    transform: rotate(0);
+}
+.planet20 {
+    top: 97%;
+    left: 69%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #90ce44 1%, #dfd112 50%, #867a1a 100%);
+    transform: rotate(18deg);
+}
+.planet21 {
+    top: 98%;
+    left: 50%;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(to bottom, #5e351b 1%, #7a5109 50%, #867a1a 100%);
+    transform: rotate(-35deg);
+}
+.planet22 {
+    top: 100%;
+    left: 88%;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(to bottom, #cbce44 1%, #6a9b5a 50%, #3f3b1e 100%);
+    transform: rotate(-15deg);
+}
+.planet23 {
+    top: 100%;
+    left: 15%;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, #44aece 1%, #247394 50%, #1a7286 100%);
+    transform: rotate(-85deg);
+}
+.planet24 {
+    top: 85%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to bottom, #fecf4e 1%, #a62a44 50%, #310441 100%);
+    transform: rotate(-15deg);
+}

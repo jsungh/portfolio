@@ -1,0 +1,54 @@
+@media screen and (max-width: 1500px) {
+	
+}
+
+@media screen and (max-width: 1400px) {
+	
+}
+
+@media screen and (max-width: 1200px) {
+	.btn_hamburger {
+		display: block;
+	}
+	nav {display: none;}
+	.langSelect,.langSelect + .select2 {
+		display: none;
+	}
+	.header_logo {
+		width: 120px;
+		height: 45px;
+		background-image: url('/images/logo/idis.svg');
+		background-size: auto 45px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 576px) {
+
+}
+
+
+/*태블릿*/
+@media screen and  (min-width: 768px) {
+
+}
+
+/*노트북*/
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+/*웹*/
+@media screen and (min-width: 1600px) {
+}
