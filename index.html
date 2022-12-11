@@ -141,8 +141,6 @@
 
         let tempValue = Math.floor((currentScroll / onePersentPerPixel));
 
-        console.log(190 - ((currentScroll / screenHeight) * 80));
-
         // 최상단 텍스트
         let overlayText = document.querySelector('.topTextBox');
         overlayText.style.opacity = 1 - (currentScroll / screenHeight);
