@@ -53,7 +53,7 @@ main {
     height: 2100vh;
     background: linear-gradient( to top, #3d3954 10%, #2f2c3e 30%, #1d1d1d );
     background-color: #1d1d1d;
-    background-image: url(/images/space_stars_static.svg);
+    background-image: url(../images/space_stars_static.svg);
     background-size: 20%;
     overflow: hidden;
 }
@@ -534,7 +534,7 @@ main {
     height: calc(100% - 90px);
     background: linear-gradient( to top, #3d3954 10%, #2f2c3e 30%, #1d1d1d );
     background-color: #1d1d1d;
-    background-image: url(/images/space_stars_static.svg);
+    background-image: url(../images/space_stars_static.svg);
     background-size: 20%;    
     z-index: 3;
 }
