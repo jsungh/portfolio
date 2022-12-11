@@ -1,7 +1,73 @@
 main {
-    height: 8000px;
-    background: linear-gradient( to top, #1d1d1d 50%, rgb(28, 28, 28) 60%, #1d1d1d );
+    height: 100%;
+}
 
+.top_character {
+    position: fixed;
+    width: 190px;
+    top: 45%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    animation: bounce 0.5s infinite cubic-bezier(0.5, 0.2, 0.8, 0.35);
+    animation-direction: alternate;
+    z-index: 2;
+}
+.top_character img.tail {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.top_character img.wing {
+    position: absolute;
+    width: 26%;
+    right: 22%;
+    top: -1%;
+}
+.top_character img.wing.left {
+    animation: wing_left 0.35s infinite;
+    z-index: 2;
+}
+.top_character img.wing.right {
+    animation: wing_right 0.35s infinite;
+}
+.main_contents .text_box {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: #fff;
+    z-index: 1;
+}
+.main_contents h1 {
+    text-align: center;
+    font-size: 10vw;
+}
+.main_contents h1 span {
+    display: inline-block;
+    transform: rotate(10deg);
+}
+
+.animate_section {
+    position: relative;
+    height: 2100vh;
+    background: linear-gradient( to top, #3d3954 10%, #2f2c3e 30%, #1d1d1d );
+    background-color: #1d1d1d;
+    background-image: url(/images/space_stars_static.svg);
+    background-size: 20%;
+    overflow: hidden;
+}
+
+.center_text_wrap > * {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    padding: 0 15px;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 5;
 }
 
 .character {
@@ -10,21 +76,79 @@ main {
     top: 0;
     right: 50%;
     transform: translate(50%, 0);
+    animation: bounce 0.5s infinite cubic-bezier(0.5, 0.2, 0.8, 0.35);
+    animation-direction: alternate;
+    z-index: 2;
 }
-.character img {
+@keyframes bounce {
+    from { margin-top: 0; }
+    to { margin-top: 7px; }
+ }
+.character img.tail {
+    position: relative;
     width: 100%;
+    z-index: 1;
 }
+.character img.wing {
+    position: absolute;
+    width: 26%;
+    right: 22%;
+    top: -1%;
+}
+.character img.wing.left {
+    animation: wing_left 0.35s infinite;
+    z-index: 2;
+}
+.character img.wing.right {
+    animation: wing_right 0.35s infinite;
+}
+
+@keyframes wing_left {
+    0% { 
+        top: -1%;
+        transform: rotate3d(1, 0, 0, 0);
+    }
+    50% { 
+        top: 20%;
+        transform: rotate3d(1, 0, 0, -130deg);
+    }
+    100% {
+        top: -1%;
+        transform: rotate3d(1, 0, 0, 0);
+    }
+}
+@keyframes wing_right {
+    0% { 
+        top: -1%;
+        transform: rotate3d(1, 0, 0, 0);
+    }
+    /* 25% {
+        top: 9%;
+        transform: rotate3d(1, 0, 0, -75deg);
+    } */
+    50% { 
+        top: 17%;
+        transform: rotate3d(1, 0, 0, -115deg);
+    }
+    100% {
+        top: -1%;
+        transform: rotate3d(1, 0, 0, 0);
+    }
+}
+
+
 .planet_wrap {
     position: relative;
-    height: 70%;
+    height: 100%;
 }
 .sub_planet {
     position: absolute;
     border-radius: 50%;
-    z-index: 4;
+    box-shadow: -10px -10px 0 0 rgb(0 0 0 / 15%) inset, -20px -20px 0 0 rgb(0 0 0 / 10%) inset, 3px 3px 0 0 rgb(255 255 255 / 20%) inset;
+    z-index: 1;
 }
 .planet1 {
-    top: 24%;
+    top: 4%;
     left: 75%;
     width: 35px;
     height: 35px;
@@ -32,7 +156,7 @@ main {
     transform: rotate(-15deg);
 }
 .planet2 {
-    top: 25%;
+    top: 5%;
     left: 35%;
     width: 45px;
     height: 45px;
@@ -40,7 +164,7 @@ main {
     transform: rotate(-20deg);
 }
 .planet3 {
-    top: 30%;
+    top: 6%;
     left: 15%;
     width: 60px;
     height: 60px;
@@ -48,7 +172,7 @@ main {
     transform: rotate(0);
 }
 .planet4 {
-    top: 32%;
+    top: 8%;
     left: 68%;
     width: 50px;
     height: 50px;
@@ -56,15 +180,16 @@ main {
     transform: rotate(18deg);
 }
 .planet5 {
-    top: 44%;
+    top: 17%;
     left: 80%;
     width: 55px;
     height: 55px;
     background: linear-gradient(to bottom, #5e351b 1%, #7a5109 50%, #867a1a 100%);
     transform: rotate(-35deg);
+    box-shadow: -5px 0 0 rgb(0 0 0 / 15%) inset, -10px -10px 0 0 rgb(0 0 0 / 10%) inset, 1px 1px 0 0 rgb(255 255 255 / 20%) inset;
 }
 .planet6 {
-    top: 45%;
+    top: 20%;
     left: 30%;
     width: 45px;
     height: 45px;
@@ -72,7 +197,7 @@ main {
     transform: rotate(-15deg);
 }
 .planet7 {
-    top: 34%;
+    top: 14%;
     left: 10%;
     width: 30px;
     height: 30px;
@@ -80,7 +205,7 @@ main {
     transform: rotate(-85deg);
 }
 .planet8 {
-    top: 50%;
+    top: 24%;
     left: 43%;
     width: 120px;
     height: 120px;
@@ -88,7 +213,7 @@ main {
     transform: rotate(-15deg);
 }
 .planet9 {
-    top: 55%;
+    top: 28%;
     left: 75%;
     width: 55px;
     height: 55px;
@@ -96,7 +221,7 @@ main {
     transform: rotate(-15deg);
 }
 .planet10 {
-    top: 55%;
+    top: 30%;
     left: 10%;
     width: 70px;
     height: 70px;
@@ -104,7 +229,7 @@ main {
     transform: rotate(-20deg);
 }
 .planet11 {
-    top: 70%;
+    top: 37%;
     left: 7%;
     width: 60px;
     height: 60px;
@@ -112,7 +237,7 @@ main {
     transform: rotate(0);
 }
 .planet12 {
-    top: 67%;
+    top: 35%;
     left: 60%;
     width: 50px;
     height: 50px;
@@ -120,15 +245,16 @@ main {
     transform: rotate(18deg);
 }
 .planet13 {
-    top: 72%;
+    top: 40%;
     left: 75%;
     width: 55px;
     height: 55px;
     background: linear-gradient(to bottom, #5e351b 1%, #7a5109 50%, #867a1a 100%);
     transform: rotate(-35deg);
+    box-shadow: -5px 0 0 rgb(0 0 0 / 15%) inset, -10px -10px 0 0 rgb(0 0 0 / 10%) inset, 1px 1px 0 0 rgb(255 255 255 / 20%) inset;
 }
 .planet14 {
-    top: 80%;
+    top: 45%;
     left: 37%;
     width: 80px;
     height: 80px;
@@ -136,7 +262,7 @@ main {
     transform: rotate(-15deg);
 }
 .planet15 {
-    top: 81%;
+    top: 51%;
     left: 73%;
     width: 30px;
     height: 30px;
@@ -144,15 +270,15 @@ main {
     transform: rotate(-85deg);
 }
 .planet16 {
-    top: 66%;
+    top: 46%;
     left: 15%;
     width: 120px;
     height: 120px;
-    background: linear-gradient(to bottom, #fecf4e 1%, #a62a44 50%, #310441 100%);
+    background: linear-gradient(to bottom, #fecf4e 1%, #654c51 50%, #3d2645 100%);
     transform: rotate(-15deg);
 }
 .planet17 {
-    top: 87%;
+    top: 54%;
     left: 80%;
     width: 35px;
     height: 35px;
@@ -160,7 +286,7 @@ main {
     transform: rotate(-15deg);
 }
 .planet18 {
-    top: 88%;
+    top: 57%;
     left: 10%;
     width: 70px;
     height: 70px;
@@ -168,7 +294,7 @@ main {
     transform: rotate(-20deg);
 }
 .planet19 {
-    top: 91%;
+    top: 61%;
     left: 25%;
     width: 60px;
     height: 60px;
@@ -176,7 +302,7 @@ main {
     transform: rotate(0);
 }
 .planet20 {
-    top: 97%;
+    top: 67%;
     left: 69%;
     width: 50px;
     height: 50px;
@@ -184,15 +310,16 @@ main {
     transform: rotate(18deg);
 }
 .planet21 {
-    top: 98%;
+    top: 75%;
     left: 50%;
     width: 55px;
     height: 55px;
     background: linear-gradient(to bottom, #5e351b 1%, #7a5109 50%, #867a1a 100%);
     transform: rotate(-35deg);
+    box-shadow: -5px 0 0 rgb(0 0 0 / 15%) inset, -10px -10px 0 0 rgb(0 0 0 / 10%) inset, 1px 1px 0 0 rgb(255 255 255 / 20%) inset;
 }
 .planet22 {
-    top: 100%;
+    top: 80%;
     left: 88%;
     width: 45px;
     height: 45px;
@@ -200,7 +327,7 @@ main {
     transform: rotate(-15deg);
 }
 .planet23 {
-    top: 100%;
+    top: 80%;
     left: 15%;
     width: 30px;
     height: 30px;
@@ -208,10 +335,239 @@ main {
     transform: rotate(-85deg);
 }
 .planet24 {
-    top: 85%;
+    top: 65%;
     left: 50%;
     width: 120px;
     height: 120px;
-    background: linear-gradient(to bottom, #fecf4e 1%, #a62a44 50%, #310441 100%);
+    background: linear-gradient(to bottom, #fe4e4e 1%, #a62a44 50%, #310441 100%);
     transform: rotate(-15deg);
+}
+
+.portfolio_wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+}
+
+.portfolio_planet {
+    position: absolute;
+    z-index: 2;
+}
+.portfolio_planet1 {
+    top: 12%;
+    right: 20%;
+}
+.portfolio_planet .inner_planet {
+    position: relative;
+    border-radius: 50%;
+    box-shadow: -10px -10px 0 0 rgb(0 0 0 / 15%) inset, -20px -20px 0 0 rgb(0 0 0 / 10%) inset, 3px 3px 0 0 rgb(255 255 255 / 20%) inset;
+    z-index: 2;
+}
+
+.portfolio_planet1 .inner_planet {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(to bottom, #fe4e4e 1%, #a62a44 50%, #310441 100%);
+    background-image: url(https://diffchild.com/uploads/portfolio/ef83227e6cf4a902a8503a5b4e802da4.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.ring-bigger-before,
+.ring-bigger-after {
+    position: absolute;
+    top: 145px;
+    left: 2px;
+    width: 400px;
+    height: 100px;
+    border-radius: 50%;
+    border: 8px solid #f8c54d;
+    transform: skew(-54deg) scale(1.3);
+}
+
+
+.ring-bigger-before {
+  z-index: 3;
+  clip-path: inset(50% 0 0 0);
+}
+
+
+.ring-bigger-after {
+  z-index: 1;
+  clip-path: inset(0 0 50% 0);
+}
+
+.sun_wrap {
+    display: flex;
+    position: absolute;
+    width: 30%;
+    right: 50%;
+    top: 15%;
+    align-items: center;
+    justify-content: center;
+    transform: translate(50%, 0);
+}
+.sun {
+    padding-top: 100%;
+    width:100%;
+    background-color: #ffde00;
+    border-radius:50%;
+    animation-name: rays;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rays {
+	0% {
+		box-shadow: 
+		0 0 0 0 #FFDE0040,
+		0 0 0 15px #FFDE0040,
+		0 0 0 30px #FFDE0020,
+		0 0 15px 30px #FFDE0020;
+	}
+	100% {
+		box-shadow: 
+		0 0 0 15px #FFDE0040,
+		0 0 0 30px #FFDE0020,
+		0 0 0 45px #FFDE0000,
+		0 0 15px 30px #FFDE0020;
+	}
+}
+
+.earth_wrap {
+    display: flex;
+    position: absolute;
+    width: 475px;
+    /* width: 100%; */
+    right: 50%;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    transform: translate(50%, 0);
+}
+
+.earth {
+    padding-top: 100%;
+    width:100%;
+    background-image:url( https://raw.githubusercontent.com/cartalan/TierraGirando/master/img/mapa.png);
+    background-position: right;
+    background-size:cover;
+    border-radius:50%;
+    box-shadow:-30px -20px 0 0 rgba(0,0,0,.15) inset, -70px -30px 0 0 rgba(0,0,0,.1) inset, 5px 5px 0 0 rgba(255,255,255,.2) inset;
+}
+.hole_wrap {
+    position: absolute;
+    width: 100%;
+    height: calc(50vh + 70px);
+    left: 0;
+    bottom: 0; 
+    text-align: center;
+    z-index: 4;
+}
+
+.hole_before,
+.hole_after {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 120px;
+    height: 103px;
+    border-radius: 50%;
+    border: 14px solid #fff;
+    transform: translate(50%, 0);
+}
+.hole_before {
+    top: -0.5px;
+    z-index: 5;
+    overflow: hidden;
+    clip-path: inset(50% 0 0 0);
+}
+.hole_after {
+  z-index: 1;
+  overflow: hidden;
+  clip-path: inset(0 0 50% 0);
+}
+
+.hole_before::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    width: 90px;
+    height: 93px;
+    border-radius: 50%;
+    border: 14px solid #919191;
+    transform: translate(50%, 0);
+}
+.hole_after::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    width: 90px;
+    height: 93px;
+    border-radius: 50%;
+    border: 14px solid #919191;
+    transform: translate(50%, 0);
+}
+.hole_shadow {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    width: 115px;
+    height: 106px;
+    border-radius: 50%;
+    border-bottom: 26px solid #919191;
+    transform: translate(50%, 0);
+    z-index: 4;
+}
+.hidden_area {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(100% - 90px);
+    background: linear-gradient( to top, #3d3954 10%, #2f2c3e 30%, #1d1d1d );
+    background-color: #1d1d1d;
+    background-image: url(/images/space_stars_static.svg);
+    background-size: 20%;    
+    z-index: 3;
+}
+
+.opgg {
+    display: inline-block;
+    position: relative;
+    margin-top: 35px;
+    margin-left: 185px;
+    font-family: verdana;
+    font-size: 60px;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+    z-index: 4;
+}
+.opgg > span {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    border: 20px solid #fff;
+    border-radius: 50%;
 }

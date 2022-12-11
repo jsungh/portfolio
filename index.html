@@ -14,53 +14,122 @@
 
 <body>
     <main>
+        <!-- <section class="mainSection main_section">
+            <div class="sun_wrap">
+                <div class="sun"></div>
+            </div>
+        </section> -->
 
-        <div class="planet_wrap">
-            <div class="sub_planet planet1"></div>
-            <div class="sub_planet planet2"></div>
-            <div class="sub_planet planet3"></div>
-            <div class="sub_planet planet4"></div>
-            <div class="sub_planet planet5"></div>
-            <div class="sub_planet planet6"></div>
-            <div class="sub_planet planet7"></div>
-            <div class="sub_planet planet8"></div>
-            <div class="sub_planet planet9"></div>
-            <div class="sub_planet planet10"></div>
-            <div class="sub_planet planet11"></div>
-            <div class="sub_planet planet12"></div>
-            <div class="sub_planet planet13"></div>
-            <div class="sub_planet planet14"></div>
-            <div class="sub_planet planet15"></div>
-            <div class="sub_planet planet16"></div>
-            <div class="sub_planet planet17"></div>
-            <div class="sub_planet planet18"></div>
-            <div class="sub_planet planet19"></div>
-            <div class="sub_planet planet20"></div>
-            <div class="sub_planet planet21"></div>
-            <div class="sub_planet planet22"></div>
-            <div class="sub_planet planet23"></div>
-            <div class="sub_planet planet24"></div>
+        <section class="animateSection animate_section">
 
-        </div>
+            <div class="main_contents">
+                <div class="topTextBox text_box">
+                    <h1><span>SCROLL</span>&nbsp;DOWN</h1>
+                </div>
+            </div>
 
-        <div id="character" class="character">
-            <img src="/images/tail.webp" alt="" />
-        </div>
+            <div class="center_text_wrap">
+                <h1 class="centerText">WHO AM I?</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">안녕하세요.</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">저는 현재 웹에이젼시에서<br>근무 하고 있는</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">6년차 개발자<br>허재성입니다.</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">오랜시간동안 있었던 둥지에서 떠나<br>새로운 환경에서</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">다시 출발하고자합니다.</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">길게 작성하기엔<br>제가 협곡에 가야되서</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">여기까지 하겠습니다.</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">감사합니다.</h1>
+                <!-- <span class="centerText"></span>
+                <h1 class="centerText">지금 내려오는 친구는 '용의꼬리'라는<br>쿠키런 케릭터입니다.</h1>
+                <span class="centerText"></span>
+                <h1 class="centerText">냉철하게 용의 머리라고<br>말씀을 드릴수가 없는 제 자신을<br>빗대어 사용하게 됐습니다.</h1> -->
+            </div>
+
+            <div class="planet_wrap">
+                <div class="sub_planet planet1"></div>
+                <div class="sub_planet planet2"></div>
+                <div class="sub_planet planet3"></div>
+                <div class="sub_planet planet4"></div>
+                <div class="sub_planet planet5"></div>
+                <div class="sub_planet planet6"></div>
+                <div class="sub_planet planet7"></div>
+                <div class="sub_planet planet8"></div>
+                <div class="sub_planet planet9"></div>
+                <div class="sub_planet planet10"></div>
+                <div class="sub_planet planet11"></div>
+                <div class="sub_planet planet12"></div>
+                <div class="sub_planet planet13"></div>
+                <div class="sub_planet planet14"></div>
+                <div class="sub_planet planet15"></div>
+                <div class="sub_planet planet16"></div>
+                <div class="sub_planet planet17"></div>
+                <div class="sub_planet planet18"></div>
+                <div class="sub_planet planet19"></div>
+                <div class="sub_planet planet20"></div>
+                <div class="sub_planet planet21"></div>
+                <div class="sub_planet planet22"></div>
+                <div class="sub_planet planet23"></div>
+                <div class="sub_planet planet24"></div>
+            </div>
+
+            <!-- <div class="portfolio_wrap">
+
+                <div class="portfolio_planet portfolio_planet1">
+                    <div class="ring-bigger-before"></div>
+                    <div class="inner_planet"></div>
+                    <div class="ring-bigger-after"></div>
+                </div>
+
+            </div> -->
+
+            <!-- <div class="earth_wrap">
+                <div class="earth"></div>
+            </div> -->
+
+            <!-- <div id="character" class="character">
+                <img class="wing left" src="/images/wing.svg" />
+                <img class="wing right" src="/images/wing2.svg" />
+                <img class="tail" src="/images/tail.png" alt="" />
+            </div> -->
+
+            <div class="hole_wrap">
+                <div class="hole_before"></div>
+
+                <div class="topCharacter top_character">
+                    <img class="wing left" src="/images/wing.svg" />
+                    <img class="wing right" src="/images/wing2.svg" />
+                    <img class="tail" src="/images/tail.png" alt="" />
+                </div>
+
+                <div class="hole_after"></div>
+                <div class="hole_shadow"></div>
+
+                <span class="opgg">P<br>GG</span>
+
+                <div class="hidden_area"></div>
+            </div>
+        </section>
+
     </main>
 </body>
 
 <script>
-    const character = document.getElementById('character');
+    const main = document.querySelector('.animateSection');
+    const topCharacter = document.querySelector('.topCharacter');
+    // const character = document.getElementById('character');
 
     // 왕복 횟수
-    const roundTrip = 3;
-    // 캐릭터 움직임 방향
-    let direction = 'right';
+    const roundTrip = 5;
     let right = 50;
 
-    window.addEventListener('scroll', function () {
-        
-        let main = document.querySelector('main');
+    const scrollEvent = () => {
 
         let totalHeight = main.offsetHeight;
         let screenHeight = document.documentElement.offsetHeight;
@@ -68,45 +137,42 @@
 
         let ratio = totalHeight / screenHeight;
 
-        let onePersentPerPixel = totalHeight / roundTrip / 120;
+        let onePersentPerPixel = totalHeight / roundTrip / 100;
 
         let tempValue = Math.floor((currentScroll / onePersentPerPixel));
 
-        if(tempValue >= 90) {
-            tempValue = (tempValue - (Math.floor((currentScroll / onePersentPerPixel) / 30) * 30));
-        } else if(tempValue >= 30) {
-            console.log(tempValue, (Math.floor((currentScroll / onePersentPerPixel) / 30)));
-            tempValue = 30 - (tempValue - (Math.floor((currentScroll / onePersentPerPixel) / 30) * 30));
+        console.log(190 - ((currentScroll / screenHeight) * 80));
+
+        // 최상단 텍스트
+        let overlayText = document.querySelector('.topTextBox');
+        overlayText.style.opacity = 1 - (currentScroll / screenHeight);
+        // 최소 120 이하로 안내려가게끔
+        topCharacter.style.width = 190 - ((currentScroll / screenHeight) * 80) > 100 ?  190 - ((currentScroll / screenHeight) * 80) + 'px' : '100px';
+
+        if((45 - ((currentScroll / screenHeight ) * 20) - ((currentScroll + screenHeight) / totalHeight * 60)) <= 0) {
+            topCharacter.style.top = ((currentScroll + screenHeight) / totalHeight * 60) + '%';
+        } else {
+            topCharacter.style.top = 45 - ((currentScroll / screenHeight ) * 20) + '%';
         }
-        //  else {
-        //     tempValue = 30 - (tempValue - ((Math.floor((currentScroll / onePersentPerPixel) / 30) - 1) * 30));
-        // }
 
-        // if(tempValue >= 90) {
-        //     tempValue = (tempValue - (Math.floor((currentScroll / onePersentPerPixel) / 30) * 30));
-        // }
-            
+        let centerText = document.querySelectorAll('.centerText');
 
-        // console.log(Math.floor((currentScroll / onePersentPerPixel) / 30), Math.floor((currentScroll / onePersentPerPixel)), (Math.floor((currentScroll / onePersentPerPixel) / 30) * 30));
+        centerText.forEach((item, index) => {
+            if (currentScroll - (screenHeight * (index + 1)) < screenHeight) {
+                item.style.opacity = (currentScroll - (screenHeight * (index + 1))) / (screenHeight);
+            } else {
+                item.style.opacity = 2 - (currentScroll - (screenHeight * (index + 1))) / (screenHeight) ;
+            }
+        });
 
-        // if(right >= 80) {
-        //     tempValue *= -1;
-        // } 
-        // if(right <= 20) {
-        //     tempValue *= 1;
-        // }
+        // character.style.top = ((currentScroll + screenHeight) / totalHeight * 60) + '%';
+    }
 
-        right = 50 + tempValue;
+    scrollEvent();
 
-        // console.log(tempValue);
-        
-
-        character.style.top = ((currentScroll + screenHeight) / totalHeight * 60) + '%';
-        character.style.right = right + '%';
+    window.addEventListener('scroll', scrollEvent);
 
 
-        
-    });
 </script>
 
 </html>
